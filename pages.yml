@@ -1,0 +1,52 @@
+name: Refresh DSS and publish
+on:
+  schedule:
+    - cron: '17 11 * * 1'
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check and validate both public datasets
+        env:
+          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
+        run: node scripts/refresh_live.cjs
+      - name: Verify dashboard data and behavior
+        run: node scripts/test_live.cjs
+      - name: Preserve validated data and refresh history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.js refresh-status.js sources/live-state.json sources/live-report.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh validated DSS dashboard data"
+            git push
+          fi
+      - uses: actions/configure-pages@v5
+      - name: Stage public dashboard only
+        run: |
+          mkdir _site
+          cp index.html style.css app.js data.js districts.js refresh-status.js favicon.svg METHODOLOGY.md .nojekyll _site/
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

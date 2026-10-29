@@ -1,0 +1,220 @@
+{
+  "checkedAt": "2026-10-29T14:50:25.126Z",
+  "reconciliation": {
+    "SNAP": {
+      "2025-01": {
+        "statewide": 378852,
+        "townSum": 378572,
+        "difference": 280
+      },
+      "2025-02": {
+        "statewide": 374932,
+        "townSum": 374650,
+        "difference": 282
+      },
+      "2025-03": {
+        "statewide": 371166,
+        "townSum": 370818,
+        "difference": 348
+      },
+      "2025-04": {
+        "statewide": 368581,
+        "townSum": 368246,
+        "difference": 335
+      },
+      "2025-05": {
+        "statewide": 366494,
+        "townSum": 366154,
+        "difference": 340
+      },
+      "2025-06": {
+        "statewide": 363667,
+        "townSum": 363280,
+        "difference": 387
+      },
+      "2025-07": {
+        "statewide": 359811,
+        "townSum": 359399,
+        "difference": 412
+      },
+      "2025-08": {
+        "statewide": 357845,
+        "townSum": 357447,
+        "difference": 398
+      },
+      "2025-09": {
+        "statewide": 356057,
+        "townSum": 355613,
+        "difference": 444
+      },
+      "2025-10": {
+        "statewide": 351070,
+        "townSum": 350677,
+        "difference": 393
+      },
+      "2025-11": {
+        "statewide": 344201,
+        "townSum": 343842,
+        "difference": 359
+      },
+      "2025-12": {
+        "statewide": 339206,
+        "townSum": 338863,
+        "difference": 343
+      },
+      "2026-01": {
+        "statewide": 334743,
+        "townSum": 334439,
+        "difference": 304
+      },
+      "2026-02": {
+        "statewide": 330450,
+        "townSum": 330183,
+        "difference": 267
+      },
+      "2026-03": {
+        "statewide": 326686,
+        "townSum": 326426,
+        "difference": 260
+      },
+      "2026-04": {
+        "statewide": 313092,
+        "townSum": 312808,
+        "difference": 284
+      },
+      "2026-05": {
+        "statewide": 311257,
+        "townSum": 310979,
+        "difference": 278
+      },
+      "2026-06": {
+        "statewide": 308440,
+        "townSum": 308231,
+        "difference": 209
+      },
+      "2026-07": {
+        "statewide": 301986,
+        "townSum": 301692,
+        "difference": 294
+      },
+      "2026-08": {
+        "statewide": 301833,
+        "townSum": 301493,
+        "difference": 340
+      },
+      "2026-09": {
+        "statewide": 296953,
+        "townSum": 296685,
+        "difference": 268
+      }
+    },
+    "Medicaid": {
+      "2025-01": {
+        "statewide": 906610,
+        "townSum": 902187,
+        "difference": 4423
+      },
+      "2025-02": {
+        "statewide": 905384,
+        "townSum": 901013,
+        "difference": 4371
+      },
+      "2025-03": {
+        "statewide": 903896,
+        "townSum": 899441,
+        "difference": 4455
+      },
+      "2025-04": {
+        "statewide": 895811,
+        "townSum": 891331,
+        "difference": 4480
+      },
+      "2025-05": {
+        "statewide": 893961,
+        "townSum": 889378,
+        "difference": 4583
+      },
+      "2025-06": {
+        "statewide": 891865,
+        "townSum": 887273,
+        "difference": 4592
+      },
+      "2025-07": {
+        "statewide": 891654,
+        "townSum": 887048,
+        "difference": 4606
+      },
+      "2025-08": {
+        "statewide": 891184,
+        "townSum": 886560,
+        "difference": 4624
+      },
+      "2025-09": {
+        "statewide": 890592,
+        "townSum": 885938,
+        "difference": 4654
+      },
+      "2025-10": {
+        "statewide": 889160,
+        "townSum": 884446,
+        "difference": 4714
+      },
+      "2025-11": {
+        "statewide": 882803,
+        "townSum": 878160,
+        "difference": 4643
+      },
+      "2025-12": {
+        "statewide": 882397,
+        "townSum": 877671,
+        "difference": 4726
+      },
+      "2026-01": {
+        "statewide": 881945,
+        "townSum": 877310,
+        "difference": 4635
+      },
+      "2026-02": {
+        "statewide": 879514,
+        "townSum": 874974,
+        "difference": 4540
+      },
+      "2026-03": {
+        "statewide": 878511,
+        "townSum": 873903,
+        "difference": 4608
+      },
+      "2026-04": {
+        "statewide": 876642,
+        "townSum": 871928,
+        "difference": 4714
+      },
+      "2026-05": {
+        "statewide": 874680,
+        "townSum": 870083,
+        "difference": 4597
+      },
+      "2026-06": {
+        "statewide": 873170,
+        "townSum": 868651,
+        "difference": 4519
+      },
+      "2026-07": {
+        "statewide": 871150,
+        "townSum": 866391,
+        "difference": 4759
+      },
+      "2026-08": {
+        "statewide": 869599,
+        "townSum": 864791,
+        "difference": 4808
+      },
+      "2026-09": {
+        "statewide": 868279,
+        "townSum": 863526,
+        "difference": 4753
+      }
+    }
+  },
+  "checks": "Pagination count, stable revisions, duplicate keys, valid counts, 169 towns, continuous common months, program coverage, row-coverage guard, Medicaid band reconciliation"
+}
