@@ -80,6 +80,23 @@ main{background:#e2eaf4;padding:14px}.embed-title h1{font-size:19px}.embed-title
 
 .source-scope{font-size:11px;color:#46617d;line-height:1.4;margin:9px 0 2px}
 
-/* Final balance: quiet analytical panels, confident CT Voices blue. */
+
 main{background:#e3edf8}.embed-title{padding-bottom:10px;border-bottom:2px solid #1c4383}.embed-title h1{font-size:21px;line-height:1.25;color:#173f7b}.compact-freshness{margin-top:9px;color:#506983}.controls{background:#d5e4f5;border-color:#b3c9e2}.toggle button[aria-pressed=true]{background:#1c4383;box-shadow:0 2px 5px #183b6920}.explorer{box-shadow:0 3px 14px #1c438308}.metrics article:first-child{background:#1c4383}.map-pane .map{background:#e4eef9}.policy-section{background:linear-gradient(115deg,#1c4383,#245ca4);border:0;border-top:3px solid #b10e38;border-radius:5px;color:#fff;padding:23px 24px}.policy-section .eyebrow{color:#c2ddff;font-size:10px;letter-spacing:1.3px}.policy-section h2{color:white;font:normal 27px/1.2 Georgia,serif}.policy-section .policy-intro{color:#e0ebfa;max-width:900px;font-size:12px}.policy-grid{gap:25px}.policy-grid article{border-top:1px solid #83acdd;padding-top:14px}.policy-grid h3{color:#fff;font-size:17px}.policy-grid p{color:#e8f0fb;font-size:13px;line-height:1.65}.policy-source{color:#fff;font-weight:600}.policy-source:hover{color:#cbe6ff}.method{border-color:#bdcfe4;background:#f6f9fd}.method-body{font-size:13px;line-height:1.6}.method-body strong{color:#214b7e}.source-dates{background:#e7eff8;padding:12px 14px;border-radius:3px;font-size:12px;line-height:1.8}.source-scope{font-size:11px;line-height:1.5}
 @media(max-width:600px){.embed-title h1{font-size:18px}.policy-section{padding:18px}.policy-grid{gap:17px}.policy-section h2{font-size:24px}}
+
+/* Small white bullet before each policy recommendation paragraph */
+.policy-grid article > p {
+  position: relative;
+  padding-left: 15px;
+}
+
+.policy-grid article > p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fff;
+}
