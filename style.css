@@ -3,7 +3,7 @@
 /* Header tagline */
 .header-tagline{color:#f16b73;font-family:Georgia,serif;font-style:italic;font-size:25px;line-height:1.2;letter-spacing:-.3px}@media(max-width:640px){.header-tagline{font-size:19px;max-width:210px}header{flex-wrap:wrap}.brand{min-width:0}}
 
-/* Light editorial edition */
+/* Light blue Voices Branding */
 :root{color-scheme:light;color:#24374d;background:#f4f7fc;--line:#d4dfec;--blue:#1c4383;--muted:#596e86}
 header{background:#fff;border-top:5px solid #1c4383;border-bottom:1px solid #d6e0ed;padding-top:20px;padding-bottom:20px}
 .draft-logo{display:grid;grid-template-columns:50px auto;column-gap:13px;align-items:center;color:#1c4383;position:relative;padding:0 0 10px;border-bottom:3px solid #b10e38}
@@ -64,7 +64,7 @@ html,body{background:transparent}main{max-width:1200px;margin:0 auto;padding:18p
 @media(max-width:900px){.numbers-pane{grid-template-columns:1fr;gap:9px}.numbers-pane .scope{display:flex;align-items:center;justify-content:space-between;gap:12px}.numbers-pane .scope span{margin:0}.trend-pane .chart{height:220px}.map-pane .panel-head{align-items:flex-start}.map-pane .map{height:210px}}
 @media(max-width:600px){.explorer{grid-template-columns:1fr}.numbers-pane{display:block;position:sticky;top:0;z-index:5;padding:9px;box-shadow:0 3px 8px #17385818}.numbers-pane .scope{display:block;margin-bottom:6px}.metrics article,.metrics article:first-child{padding:8px 6px}.metrics strong,.metrics article:first-child strong{font-size:24px}.metrics p{font-size:10px;min-height:24px}.metrics span{display:none}.trend-pane{border-left:0;border-top:1px solid #adc3dc}.map-pane .map{height:210px}.trend-pane .chart{height:230px}.policy-grid h3{min-height:0}}
 
-/* Official CT Voices final presentation */
+/* Official CT Voices */
 .official-masthead{display:flex;align-items:center;gap:20px;margin-bottom:10px}.official-masthead>a{flex:0 0 156px;display:block}.official-masthead img{display:block;width:156px;height:auto}.official-masthead .compact-heading{flex:1}.compact-heading h1{color:#1c4383}.controls,.metrics article:first-child,.policy-section{background:#1c4383}.policy-section{border-top-color:#b10e38}.trend-pane{border-left:0;border-right:1px solid #adc3dc}.policy-grid h3{min-height:0}.policy-grid p{font-size:14px;line-height:1.6}.compact-freshness{margin-top:0}
 @media(max-width:600px){.official-masthead{gap:12px}.official-masthead>a{flex-basis:112px}.official-masthead img{width:112px}.compact-heading h1{font-size:21px}.compact-heading .eyebrow{font-size:9px}.trend-pane{border-right:0;border-top:0}.map-pane{border-top:1px solid #adc3dc}}
 
