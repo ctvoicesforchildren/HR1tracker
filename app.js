@@ -22,7 +22,16 @@ function opts(id,items){items.forEach(([v,n])=>{const o=document.createElement('
 opts('town',D.towns.map(t=>[t,t]));opts('month',D.months.filter(m=>m>=baseline).map(m=>[m,monthName(m)]));$('month').value=month;
 $('updated').textContent=D.updated?new Date(D.updated).toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'America/New_York'}):'Not supplied with workbook';$('latest').textContent='Reporting through '+monthName(D.months.at(-1));$('town-source-date').textContent=new Date(D.sources.town.updatedAt).toLocaleDateString('en-US');$('state-updated').textContent=new Date(D.sources.state.updatedAt).toLocaleDateString('en-US');$('sync-date').textContent=new Date(D.syncedAt).toLocaleDateString('en-US');$('checked-date').textContent=new Date(window.REFRESH_STATUS?.checkedAt||D.syncedAt).toLocaleDateString('en-US');
 $('geography').onchange=e=>{geography=e.target.value;town='all';$('town').innerHTML='<option value="all">Statewide · 169 municipalities</option>';opts('town',geography==='town'?D.towns.map(t=>[t,t]):Object.keys(G[geography].allocations).sort((a,b)=>a-b).map(id=>[id,place(id)]));render();};
-$('town').onchange=e=>{town=e.target.value;render();};$('month').onchange=e=>{month=e.target.value;render();};$('measure').onchange=e=>{measure=e.target.value;renderMap();};$('reset').onclick=()=>choose('all');
+$('town').onchange=e=>{town=e.target.value;render();};$('month').onchange=e=>{month=e.target.value;render();};$('measure').onchange=e=>{measure=e.target.value;renderMap();};
+$('reset').onclick = () => {
+  program = 'SNAP';
+  month = D.months.at(-1);
+  measure = 'percent';
+  $('month').value = month;
+  $('measure').value = measure;
+  $('geography').value = 'town';
+  $('geography').onchange({ target: $('geography') });
+};
 for(const p of ['SNAP','Medicaid'])$(p.toLowerCase()).onclick=()=>{program=p;render();};
 function choose(t){town=t;$('town').value=t;render();}
 function metric(id,labelId,value,lossLabel,gainLabel,suffix=''){const gain=value<0;$(id).textContent=value===null?'Not available':(suffix?Math.abs(value).toFixed(1):fmt(Math.abs(value)))+suffix;$(id).className=gain?'gain':'';$(labelId).textContent=gain?gainLabel:lossLabel;}
@@ -105,7 +114,7 @@ function renderMap() {
       path.onmouseenter = path.onfocus = () => detail(id);
       path.onmouseleave = path.onblur = () => detail(town);
     }
-    const swatch =      $('legend').innerHTML =
+    $('legend').innerHTML =
       '<b class="legend-caption">Enrollment change since July 2025</b>' +
       '<span><i style="background:#1c4383"></i>Blue: losses (darkest = highest loss in this view)</span>' +
       '<span><i style="background:#136659"></i>Green: gains</span>' +
