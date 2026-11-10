@@ -105,12 +105,12 @@ function renderMap() {
       path.onmouseenter = path.onfocus = () => detail(id);
       path.onmouseleave = path.onblur = () => detail(town);
     }
-    const swatch =  $('legend').innerHTML =
+    const swatch =      $('legend').innerHTML =
       '<b class="legend-caption">Enrollment change since July 2025</b>' +
-      <span><i style="background:#1c4383"></i>Blue: losses (darkest = highest loss in this view)</span>' +
-      <span><i style="background:#136659"></i>Green: gains</span>' +
-      <span><i style="background:#f0f2f5"></i>No change at displayed precision</span>' +
-      <span><i style="background:#aaaeb4"></i>Unavailable</span>';
+      '<span><i style="background:#1c4383"></i>Blue: losses (darkest = highest loss in this view)</span>' +
+      '<span><i style="background:#136659"></i>Green: gains</span>' +
+      '<span><i style="background:#f0f2f5"></i>No change at displayed precision</span>' +
+      '<span><i style="background:#aaaeb4"></i>Unavailable</span>';
     lastView = view;
   }
   if (highlightedId !== town) {
