@@ -105,24 +105,12 @@ function renderMap() {
       path.onmouseenter = path.onfocus = () => detail(id);
       path.onmouseleave = path.onblur = () => detail(town);
     }
-    const swatch = (value, text) => '<span><i style="background:' +
-      shade(value) + '"></i>' + text + '</span>';
-    const distinct = [...new Set(values.filter(Number.isFinite))].sort((a, b) => a - b);
-    let items;
-    if (geography === 'congress') {
-      items = entries.sort((a, b) => Number(a.id) - Number(b.id))
-        .map(({ id, value }) => swatch(value, 'District ' + id + ' · ' + changeLabel(value)));
-    } else {
-      // Choose observed values as legend examples; the colors vary continuously between them.
-      const examples = distinct.filter((value, index) =>
-        index === 0 || index === distinct.length - 1 || value === 0 ||
-        index === Math.floor((distinct.length - 1) / 2));
-      items = examples.map(value => swatch(value, changeLabel(value)));
-      if (values.includes(null)) items.push(swatch(null, 'Percentage unavailable'));
-    }
-    $('legend').innerHTML = '<b class="legend-caption">' +
-      (district ? 'Estimated district change' : 'Reported town change') +
-      ' · Color scale recalculated for this view</b>' + items.join('');
+    const swatch =  $('legend').innerHTML =
+      '<b class="legend-caption">Enrollment change since July 2025</b>' +
+      <span><i style="background:#1c4383"></i>Blue: losses (darkest = highest loss in this view)</span>' +
+      <span><i style="background:#136659"></i>Green: gains</span>' +
+      <span><i style="background:#f0f2f5"></i>No change at displayed precision</span>' +
+      <span><i style="background:#aaaeb4"></i>Unavailable</span>';
     lastView = view;
   }
   if (highlightedId !== town) {
