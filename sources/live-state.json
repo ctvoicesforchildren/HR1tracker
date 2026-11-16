@@ -1,0 +1,27 @@
+{
+  "signature": "0e855660e3f975f0d694a140c7c5467790b68f26cd9e725bc79ded1d536892b0",
+  "syncedAt": "2026-11-16T13:40:58.408Z",
+  "latest": "2026-10",
+  "sources": {
+    "town": {
+      "id": "g7bd-zbqw",
+      "url": "https://data.ct.gov/d/g7bd-zbqw",
+      "updatedAt": "2026-11-10T14:29:13.000Z",
+      "latestAvailableMonth": "2026-10"
+    },
+    "state": {
+      "id": "chsv-phja",
+      "url": "https://data.ct.gov/d/chsv-phja",
+      "updatedAt": "2026-11-10T14:27:07.000Z",
+      "latestAvailableMonth": "2026-10"
+    }
+  },
+  "rawHashes": {
+    "town": "55ded31dc1ca752f3cc05587e1481b53c67ddfadf661f8df73e9d7066d4058a5",
+    "state": "42d40dd967969f17d04ccb568d447cd5ec75ab0d47ab2dd6f4b64217b04fe79a"
+  },
+  "rowCounts": {
+    "town": 140374,
+    "state": 1393
+  }
+}

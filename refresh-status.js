@@ -1,1 +1,1 @@
-window.REFRESH_STATUS={"checkedAt":"2026-10-29T14:50:25.126Z","lastSuccessfulSync":"2026-10-29T14:50:25.126Z","changed":true};
+window.REFRESH_STATUS={"checkedAt":"2026-11-16T13:40:58.408Z","lastSuccessfulSync":"2026-11-16T13:40:58.408Z","changed":true};
