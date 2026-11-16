@@ -1,13 +1,7 @@
 # Connecticut Voices for Children-- HR1 Tracker
 
-A SNAP and Medicaid dashboard comparing the most recent available month of enrollment data with July 2025. Includes official statewide totals, municipality data, estimated district allocations, HUSKY component trends, policy milestones, and SNAP recommendations.
+CT Voices' SNAP and Medicaid dashboard comparing the most recent available month of enrollment data with July 2025. Includes official statewide totals, municipality data, estimated district allocations, HUSKY component trends, policy milestones, and SNAP recommendations.
 
-## Publish on GitHub Pages
-
-1. Upload this folder's contents to the root of your public repository on the `main` branch. Include the hidden `.github` folder, `.gitignore`, and `.nojekyll`. No installation or build command is needed locally.
-2. Enable GitHub Actions. In Settings → Pages, select **GitHub Actions** as the source.
-3. Allow Actions to write repository contents. Branch rules must allow the workflow's automated data commits.
-4. In Actions, run **Refresh DSS and publish** and confirm that it succeeds. Use the Pages URL shown by the successful deployment.
 
 ## Automatic updates
 
